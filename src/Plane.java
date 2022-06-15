@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class Plane {
+public class Plane implements Serializable {
 
     private float fuelLevel;
     private String pilotCallSign;
