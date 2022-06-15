@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Plane {
 
     private float fuelLevel;
@@ -10,6 +12,9 @@ public class Plane {
 
     private boolean seatOccupation;
 
+    public Plane() {
+    }
+
     public Plane(float fuelLevel, String pilotCallSign, String squadNumber) {
         this.fuelLevel = fuelLevel;
         this.pilotCallSign = pilotCallSign;
@@ -18,15 +23,31 @@ public class Plane {
         // Completa el código para cumplir con los requisitos.
     }
 
-    public void toggleFlaps() {
+    public void inizializar(){
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Introduzca el número de litros de combustible cargados:\n");
+        fuelLevel = sc.nextFloat();
+        System.out.println("Introduzca apodo del piloto:\n");
+        pilotCallSign = sc.next();
+        System.out.println("Introduzca número de escuadrón");
+        squadNumber = sc.next();
+
+
+
+
+
+
+    }
+
+    public void toggleFlaps() {/*alternar aletas*/
         flaps = !flaps;
     }
 
-    public void toggleLandingGear() {
+    public void toggleLandingGear() {/*alternar tren de aterrizaje*/
         landingGear = !landingGear;
     }
 
-    public void ejectionSystem() {
+    public void ejectionSystem() {/*sistema de  expulsion*/
         ejectionSystem = !ejectionSystem;
     }
 
