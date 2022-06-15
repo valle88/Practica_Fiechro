@@ -4,14 +4,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-       Plane nave = new Plane();
+       Plane f18= new Plane();
 
 
 
 
         Scanner sn = new Scanner(System.in);
         boolean salir = false;
-        int opcion;
+        String opcion;
 
         while(!salir){
 
@@ -23,25 +23,33 @@ public class Main {
             System.out.println("Q. Salir");
 
             System.out.println("Escribe una de las opciones");
-            opcion = sn.nextInt();
+            opcion = sn.next();
             switch(opcion){
-                case 1:
+                case "1":
                     System.out.println("Has seleccionado la opcion 1");
-                    nave.inizializar();
-                    System.out.println(nave);
-
-
-
+                    f18.inizializar();
+                    System.out.println(f18);
                     break;
-                case 2:
+                case "2":
                     System.out.println("Has seleccionado la opcion 2");
+                    f18.toggleFlaps();
+                    System.out.println(f18);
                     break;
-                case 3:
+                case "3":
                     System.out.println("Has seleccionado la opcion 3");
+                    f18.toggleLandingGear();
+                    System.out.println(f18);
+
                     break;
-                case 4:
+                case "4":
+                    f18.ejectionSystem();
+                    System.out.println(f18);
                     break;
-                case 5:
+                case "5":
+                    f18.setSeatOccupation(true);
+                    System.out.println(f18);
+                    break;
+                case "Q":
                     salir=true;
                     break;
 

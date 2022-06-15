@@ -6,7 +6,7 @@ public class Plane {
     private String pilotCallSign;
     private String squadNumber;
 
-    private boolean flaps;
+    private boolean flaps ;/*alas*/
     private boolean landingGear;
     private boolean ejectionSystem;
 
@@ -41,6 +41,7 @@ public class Plane {
 
     public void toggleFlaps() {/*alternar aletas*/
         flaps = !flaps;
+
     }
 
     public void toggleLandingGear() {/*alternar tren de aterrizaje*/
@@ -52,7 +53,10 @@ public class Plane {
     }
 
     public void setSeatOccupation(boolean pilotSeated) {
-        seatOccupation = pilotSeated;
+        if(ejectionSystem== true){
+            seatOccupation=true;
+        }
+
     }
 
     @Override
