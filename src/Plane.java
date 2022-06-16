@@ -51,6 +51,7 @@ public class Plane implements Serializable {
 
     public void toggleLandingGear() {/*alternar tren de aterrizaje*/
         landingGear = !landingGear;
+
     }
 
     public void ejectionSystem() {/*sistema de  expulsion*/
