@@ -51,7 +51,15 @@ public class Plane implements Serializable {
 
     public void toggleLandingGear() {/*alternar tren de aterrizaje*/
         landingGear = !landingGear;
+<<<<<<< HEAD
 
+||||||| 877c651
+=======
+        if (flaps== true ){
+            System.out.println("Arriba");
+        }
+        System.out.println("Abajo");
+>>>>>>> punto3
     }
 
     public void ejectionSystem() {/*sistema de  expulsion*/
