@@ -2,7 +2,7 @@ import java.io.*;
 
 public class ObjectFilesReader {
     public static void main(String[] args) {
-        String fileName = "data/roster.dat";
+        String fileName = "data/ plane.dat";
 
         FileInputStream inputFile = null;
         BufferedInputStream bufferedInput = null;

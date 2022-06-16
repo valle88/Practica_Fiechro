@@ -5,18 +5,18 @@ public class Main {
 
     public static void main(String[] args) {
 
-       Plane f18= new Plane();
+        Plane f18 = new Plane();
         FileOutputStream outputFile = null;
         BufferedOutputStream bufferedOutput = null;
         ObjectOutputStream objectOutput = null;
 
 
-
+        String fileName = "Data/ plane.dat";
         Scanner sn = new Scanner(System.in);
         boolean salir = false;
         String opcion;
 
-        while(!salir){
+        while (!salir) {
 
             System.out.println("1- Inizializar F18");
             System.out.println("2-Alternar el estado de los flap");
@@ -27,7 +27,7 @@ public class Main {
 
             System.out.println("Escribe una de las opciones");
             opcion = sn.next();
-            switch(opcion){
+            switch (opcion) {
                 case "1":
                     System.out.println("Has seleccionado la opcion 1");
                     f18.inizializar();
@@ -53,13 +53,12 @@ public class Main {
                     System.out.println(f18);
                     break;
                 case "Q":
-                    salir=true;
+                    salir = true;
                     try {
                         outputFile = new FileOutputStream(fileName);
                         bufferedOutput = new BufferedOutputStream(outputFile);
 
                         objectOutput = new ObjectOutputStream(bufferedOutput);
-                        objectOutput.writeObject(new Plane());
                         objectOutput.writeObject(new Plane());
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
@@ -74,16 +73,17 @@ public class Main {
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
-                        break;
+                    }
+                    break;
 
 
                 default:
                     System.out.println("Solo números entre 1 y 4");
+
+
             }
 
+
         }
-
-
-
     }
 }
