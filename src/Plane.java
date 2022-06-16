@@ -42,6 +42,10 @@ public class Plane implements Serializable {
 
     public void toggleFlaps() {/*alternar aletas*/
         flaps = !flaps;
+        if (flaps== true ){
+            System.out.println("Arriba");
+        }
+        System.out.println("Abajo");
 
     }
 
